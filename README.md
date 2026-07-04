@@ -105,6 +105,19 @@
   <img src="https://img.shields.io/badge/-大规模分布式训练-00C6FF?style=for-the-badge" />
 </p>
 
+## ✍️ 学习日志
+
+我新建了一个个人学习博客，用来记录每天在 **Java 全栈、Git/GitHub、MySQL、AI、系统与工程化配置** 上的学习成果、命令模板、踩坑记录和复盘。
+
+<p align="center">
+  <a href="https://github.com/WJH-makers/learning-blog">
+    <img src="https://img.shields.io/badge/Learning%20Blog-GitHub-00C6FF?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://vercel.com/new/clone?repository-url=https://github.com/WJH-makers/learning-blog&project-name=learning-blog&repository-name=learning-blog">
+    <img src="https://img.shields.io/badge/Deploy%20to-Vercel-0072FF?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+</p>
+
 ## 📖 教育背景
 
 - **武汉大学** · 计算机科学与技术（2022–2026）
