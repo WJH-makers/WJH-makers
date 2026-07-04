@@ -51,13 +51,13 @@
       <h3>🛰️ RingMoE</h3>
       <p><em>MindSpore · PyTorch · DeepSpeed</em></p>
       <p>Large-scale MoE pre-training for remote sensing.<br>Supports Ascend 910B + A100 with expert/data/model/pipeline parallelism.</p>
-      <a href="https://github.com/WJH-makers/RingMoE"><img src="https://img.shields.io/badge/View_Repo-0072ff?style=for-the-badge&logo=github" /></a>
+      <img src="https://img.shields.io/badge/Private_Repo-0072ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
     <td width="50%" align="center">
       <h3>⚙️ C++ Compiler</h3>
       <p><em>Python · C++</em></p>
       <p>Full compiler pipeline: lexer → parser → AST → semantic analysis → three-address code generation for C++ subset.</p>
-      <a href="https://github.com/WJH-makers/compiler-C-PLUS-PLUS"><img src="https://img.shields.io/badge/View_Repo-00c6ff?style=for-the-badge&logo=github" /></a>
+      <img src="https://img.shields.io/badge/Private_Repo-00c6ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
   </tr>
   <tr>
@@ -65,13 +65,13 @@
       <h3>💻 xv6 OS (RISC-V)</h3>
       <p><em>C · RISC-V Assembly</em></p>
       <p>Full OS kernel: process/memory/file system, syscalls, trap handling, spinlocks, drivers.</p>
-      <a href="https://github.com/WJH-makers/xv6-riscv-riscv"><img src="https://img.shields.io/badge/View_Repo-0072ff?style=for-the-badge&logo=github" /></a>
+      <img src="https://img.shields.io/badge/Private_Repo-0072ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
     <td width="50%" align="center">
       <h3>🤖 Router-MVP</h3>
       <p><em>PyTorch · Transformers</em></p>
       <p>Learned router vs. fixed topology for multi-agent systems. 3-sigma statistical validation on A100.</p>
-      <a href="https://github.com/WJH-makers/router-mvp"><img src="https://img.shields.io/badge/View_Repo-00c6ff?style=for-the-badge&logo=github" /></a>
+      <img src="https://img.shields.io/badge/Private_Repo-00c6ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
   </tr>
   <tr>
@@ -79,13 +79,13 @@
       <h3>🔧 Pipeline CPU</h3>
       <p><em>Verilog · Vivado · FPGA</em></p>
       <p>5-stage pipeline CPU with full forwarding, hazard detection, and stall/flush logic. FPGA-synthesized.</p>
-      <a href="https://github.com/WJH-makers/project4"><img src="https://img.shields.io/badge/View_Repo-0072ff?style=for-the-badge&logo=github" /></a>
+      <img src="https://img.shields.io/badge/Private_Repo-0072ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
     <td width="50%" align="center">
       <h3>📁 File Management Tool</h3>
       <p><em>C# ASP.NET Core · MVC</em></p>
       <p>Full-stack web app with Strategy Pattern: compress, scan, git load, and clean operations.</p>
-      <a href="https://github.com/WJH-makers/FileManagementTool"><img src="https://img.shields.io/badge/View_Repo-00c6ff?style=for-the-badge&logo=github" /></a>
+      <img src="https://img.shields.io/badge/Private_Repo-00c6ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
   </tr>
 </table>
