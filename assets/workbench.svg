@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">WJH-makers animated developer workbench</title>
+  <desc id="desc">A playful hand-drawn developer workbench for AI, systems, full-stack, and hardware engineering.</desc>
+  <defs>
+    <pattern id="paperDots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#e5e0d8" opacity="0.95"/>
+    </pattern>
+    <filter id="roughen">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.15" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <style>
+      :root { color-scheme: light; }
+      .bg { fill: #fdfbf7; }
+      .ink { fill: #2d2d2d; }
+      .stroke { stroke: #2d2d2d; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .blue { fill: #2d5da1; }
+      .red { fill: #ff4d4d; }
+      .muted { fill: #e5e0d8; }
+      .postit { fill: #fff9c4; }
+      .card { fill: #ffffff; stroke: #2d2d2d; stroke-width: 4; filter: url(#roughen); }
+      .shadow { fill: #2d2d2d; opacity: 1; }
+      .titleText { font: 700 50px 'Kalam', 'Comic Sans MS', 'Segoe UI', sans-serif; fill: #2d2d2d; }
+      .body { font: 400 25px 'Patrick Hand', 'Comic Sans MS', 'Segoe UI', sans-serif; fill: #2d2d2d; }
+      .small { font: 400 19px 'Patrick Hand', 'Comic Sans MS', 'Segoe UI', sans-serif; fill: #2d2d2d; }
+      .mono { font: 700 20px 'Cascadia Code', 'Fira Code', monospace; fill: #2d2d2d; }
+      .float-a { animation: floatA 4s ease-in-out infinite; transform-origin: center; }
+      .float-b { animation: floatB 5s ease-in-out infinite; transform-origin: center; }
+      .float-c { animation: floatC 4.5s ease-in-out infinite; transform-origin: center; }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; transform-origin: center; }
+      .blink { animation: blink 1s steps(2, start) infinite; }
+      .dash { stroke-dasharray: 12 12; animation: dash 2.8s linear infinite; }
+      .draw { stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 5s ease-in-out infinite alternate; }
+      .gear { animation: spin 9s linear infinite; transform-origin: 1030px 285px; }
+      @keyframes floatA { 0%,100%{ transform: translateY(0) rotate(-1deg);} 50%{ transform: translateY(-8px) rotate(1.3deg);} }
+      @keyframes floatB { 0%,100%{ transform: translateY(0) rotate(1.5deg);} 50%{ transform: translateY(7px) rotate(-1deg);} }
+      @keyframes floatC { 0%,100%{ transform: translate(0,0) rotate(-2deg);} 50%{ transform: translate(6px,-6px) rotate(1deg);} }
+      @keyframes pulse { 0%,100%{ transform: scale(1); opacity:.95;} 50%{ transform: scale(1.08); opacity:1;} }
+      @keyframes blink { 0%,45%{ opacity:1;} 46%,100%{ opacity:0;} }
+      @keyframes dash { to { stroke-dashoffset: -48; } }
+      @keyframes draw { to { stroke-dashoffset: 0; } }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) {
+        .float-a,.float-b,.float-c,.pulse,.blink,.dash,.draw,.gear { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="420"/>
+  <rect width="1200" height="420" fill="url(#paperDots)"/>
+  <path d="M27 51 C132 30,252 42,370 34 C515 23,658 39,809 31 C958 23,1080 31,1167 51 L1164 358 C1044 384,904 372,754 381 C595 391,435 376,286 382 C158 390,72 374,31 358 Z" fill="#ffffff" stroke="#2d2d2d" stroke-width="5" filter="url(#roughen)"/>
+  <rect x="513" y="19" width="170" height="34" rx="6" transform="rotate(-2 598 36)" fill="#d8d5cd" opacity="0.65"/>
+
+  <g transform="translate(72 104)">
+    <text class="titleText" x="0" y="0">Hi, I'm Wan Jiahong</text>
+    <text class="body" x="3" y="44">武汉大学 CS · AI / Systems / Full-stack / Hardware</text>
+    <text class="small" x="5" y="77">把“能跑”打磨成“可靠、可复盘、可部署”的工程。</text>
+    <path class="stroke draw" d="M7 94 C82 117,171 105,250 126 S420 145,526 113"/>
+  </g>
+
+  <g class="float-a" transform="translate(76 266) rotate(-2)">
+    <rect class="shadow" x="8" y="8" width="258" height="78" rx="24"/>
+    <path class="card" d="M2 19 C20 1,64 5,102 7 C151 9,215 1,258 18 C270 33,264 65,254 78 C188 91,88 85,16 80 C-1 67,-6 34,2 19 Z"/>
+    <text class="mono" x="24" y="46">$ git bisect good</text>
+    <rect class="blue blink" x="226" y="27" width="15" height="27" rx="2"/>
+  </g>
+
+  <g class="float-b" transform="translate(372 246) rotate(1.2)">
+    <rect class="shadow" x="8" y="8" width="302" height="96" rx="20"/>
+    <path class="postit" d="M2 14 C40 -3,92 8,144 5 C201 2,268 4,300 17 C312 42,304 80,288 96 C213 109,101 102,18 98 C0 82,-8 34,2 14 Z" stroke="#2d2d2d" stroke-width="4"/>
+    <circle class="red pulse" cx="151" cy="13" r="10" stroke="#2d2d2d" stroke-width="3"/>
+    <text class="body" x="28" y="47">Remote Sensing VQA</text>
+    <text class="small" x="34" y="76">Next.js + FastAPI + PyTorch</text>
+  </g>
+
+  <g class="float-c" transform="translate(710 251) rotate(-1)">
+    <rect class="shadow" x="8" y="8" width="236" height="90" rx="22"/>
+    <path class="card" d="M4 15 C31 2,78 7,115 5 C165 2,208 4,234 18 C244 44,236 74,221 88 C161 101,80 96,18 90 C1 76,-8 34,4 15 Z"/>
+    <text class="body" x="33" y="45">AI Router Lab</text>
+    <text class="small" x="35" y="73">PyTorch · MoE · Agents</text>
+  </g>
+
+  <g transform="translate(949 86)">
+    <rect class="shadow" x="8" y="8" width="178" height="218" rx="28"/>
+    <path class="card" d="M8 22 C28 0,63 8,94 5 C131 2,164 6,180 25 C190 82,183 158,174 214 C126 232,62 224,15 214 C-4 162,-2 76,8 22 Z"/>
+    <text class="body" x="36" y="49">Workbench</text>
+    <path class="stroke dash" d="M34 76 C73 61,113 62,149 80"/>
+    <text class="small" x="36" y="116">Compiler</text>
+    <text class="small" x="36" y="146">xv6 OS</text>
+    <text class="small" x="36" y="176">FPGA CPU</text>
+  </g>
+  <g class="gear">
+    <circle cx="1030" cy="285" r="22" class="muted" stroke="#2d2d2d" stroke-width="4"/>
+    <circle cx="1030" cy="285" r="7" fill="#ffffff" stroke="#2d2d2d" stroke-width="3"/>
+    <path class="stroke" d="M1030 255 L1030 244 M1030 326 L1030 315 M1000 285 L989 285 M1071 285 L1060 285 M1009 264 L1001 256 M1059 314 L1051 306 M1051 264 L1059 256 M1001 314 L1009 306"/>
+  </g>
+
+  <path class="stroke dash" d="M651 288 C677 266,704 265,731 279"/>
+  <path class="stroke dash" d="M932 287 C953 269,969 250,987 226"/>
+  <circle class="red pulse" cx="887" cy="91" r="13" stroke="#2d2d2d" stroke-width="4"/>
+  <circle class="blue pulse" cx="856" cy="125" r="9" stroke="#2d2d2d" stroke-width="3"/>
+  <path class="stroke" d="M831 81 C845 71,864 71,879 82"/>
+  </svg>
