@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00c6ff,100:0072ff&height=200&section=header&text=Wan%20Jiahong&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=万佳泓%20·%20CS%20Undergraduate%20@%20Wuhan%20University&descAlignY=55&descAlign=50" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00c6ff,100:0072ff&height=200&section=header&text=Wan%20Jiahong&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=%E4%B8%87%E4%BD%B3%E6%B3%93%20-%20CS%20Undergraduate%20@%20Wuhan%20University&descAlignY=55&descAlign=50" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00C6FF&center=true&vCenter=true&random=false&width=600&lines=🚀+Systems+%26+AI+Engineer;🔧+Compiler+%2F+OS+%2F+FPGA+Lover;🌐+Full-Stack+.NET+%2B+PyTorch+Developer;🎓+Wuhan+University+CS+%2726" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00C6FF&center=true&vCenter=true&random=false&width=600&lines=Systems+%26+AI+Engineer;Compiler+%2F+OS+%2F+FPGA+Lover;Full-Stack+.NET+%2B+PyTorch+Developer;Wuhan+University+CS+%2726" alt="🚀 Systems & AI Engineer 🔧 Compiler / OS / FPGA Lover 🌐 Full-Stack .NET + PyTorch Developer 🎓 Wuhan University CS '26" />
 </p>
 
 <p align="center">
