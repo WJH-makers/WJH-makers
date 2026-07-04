@@ -45,6 +45,8 @@
 
 ## 🚀 Featured Projects
 
+> 🔒 University coursework repos are private. [Contact me](mailto:wjh19@whu.edu.cn) for access.
+
 <table align="center">
   <tr>
     <td width="50%" align="center">
