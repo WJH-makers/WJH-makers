@@ -113,7 +113,7 @@
   <a href="https://github.com/WJH-makers/learning-blog">
     <img src="https://img.shields.io/badge/Learning%20Blog-GitHub-00C6FF?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="https://vercel.com/new/clone?repository-url=https://github.com/WJH-makers/learning-blog&project-name=learning-blog&repository-name=learning-blog">
+  <a href="https://vercel.com/new/clone?repository-url=https://github.com/WJH-makers/learning-blog&project-name=wjh-makers-learning-blog&repository-name=learning-blog">
     <img src="https://img.shields.io/badge/Deploy%20to-Vercel-0072FF?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </p>
