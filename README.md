@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00c6ff,100:0072ff&height=200&section=header&text=Wan%20Jiahong&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=%E4%B8%87%E4%BD%B3%E6%B3%93%20-%20CS%20Undergraduate%20@%20Wuhan%20University&descAlignY=55&descAlign=50" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00c6ff,100:0072ff&height=200&section=header&text=Wan%20Jiahong&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=%E4%B8%87%E4%BD%B3%E6%B3%93%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%20%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6&descAlignY=55&descAlign=50" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00C6FF&center=true&vCenter=true&random=false&width=600&lines=Systems+%26+AI+Engineer;Compiler+%2F+OS+%2F+FPGA+Lover;Full-Stack+.NET+%2B+PyTorch+Developer;Wuhan+University+CS+%2726" alt="🚀 Systems & AI Engineer 🔧 Compiler / OS / FPGA Lover 🌐 Full-Stack .NET + PyTorch Developer 🎓 Wuhan University CS '26" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00C6FF&center=true&vCenter=true&random=false&width=600&lines=Systems+%26+AI+Engineer;Compiler+%2F+OS+%2F+FPGA+Lover;Full-Stack+.NET+%2B+PyTorch+Developer;Wuhan+University+CS+%2726" alt="系统/AI 工程师 · 编译器/OS/FPGA · .NET + PyTorch 全栈 · 武汉大学 CS 2026" />
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 
 ---
 
-## 📊 GitHub Analytics
+## 📊 数据统计
 
 <p align="center">
   <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=WJH-makers&theme=algolia" />
@@ -36,93 +36,91 @@
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ 技术栈
 
-| Area | Technologies |
-|------|-------------|
-| **Languages** | `Python` `C` `C++` `C#` `Java` `Verilog` `SQL` |
-| **AI / ML** | `PyTorch` `MindSpore` `DeepSpeed` `Transformers` `Hugging Face` |
-| **Backend** | `ASP.NET Core` `Docker` `Maven` |
-| **Hardware** | `Vivado` `FPGA` `Keil MDK` `STM32` `Linux` |
+| 领域 | 技术 |
+|------|------|
+| **语言** | `Python` `C` `C++` `C#` `Java` `Verilog` `SQL` |
+| **AI 框架** | `PyTorch` `MindSpore` `DeepSpeed` `Transformers` |
+| **后端** | `ASP.NET Core` `Docker` `Maven` |
+| **硬件** | `Vivado` `FPGA` `Keil MDK` `STM32` `Linux` |
 | **DevOps** | `Git` `CI/CD` `Docker Compose` |
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 主要项目
 
-> 🔒 University coursework repos are private. [Contact me](mailto:wjh19@whu.edu.cn) for access.
+> 🔒 部分课程项目因包含个人信息设为私有，如需查看请联系 [wjh19@whu.edu.cn](mailto:wjh19@whu.edu.cn)
 
 <table align="center">
   <tr>
     <td width="50%" align="center">
       <h3>🛰️ RingMoE</h3>
       <p><em>MindSpore · PyTorch · DeepSpeed</em></p>
-      <p>Large-scale MoE pre-training for remote sensing.<br>Supports Ascend 910B + A100 with expert/data/model/pipeline parallelism.</p>
-      <img src="https://img.shields.io/badge/Private_Repo-0072ff?style=for-the-badge&logo=github&logoColor=white" />
+      <p>遥感影像大规模 MoE 预训练框架，支持 Ascend 910B + A100，实现四种并行策略。</p>
+      <img src="https://img.shields.io/badge/Private-0072ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
     <td width="50%" align="center">
       <h3>⚙️ C++ Compiler</h3>
       <p><em>Python · C++</em></p>
-      <p>Full compiler pipeline: lexer → parser → AST → semantic analysis → three-address code generation for C++ subset.</p>
-      <img src="https://img.shields.io/badge/Private_Repo-00c6ff?style=for-the-badge&logo=github&logoColor=white" />
+      <p>完整编译器流水线：词法 → 语法 → AST → 语义分析 → 三地址码，纯 Python 实现。</p>
+      <img src="https://img.shields.io/badge/Private-00c6ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center">
       <h3>💻 xv6 OS (RISC-V)</h3>
-      <p><em>C · RISC-V Assembly</em></p>
-      <p>Full OS kernel: process/memory/file system, syscalls, trap handling, spinlocks, drivers.</p>
-      <img src="https://img.shields.io/badge/Private_Repo-0072ff?style=for-the-badge&logo=github&logoColor=white" />
+      <p><em>C · RISC-V Asm</em></p>
+      <p>完整操作系统内核：进程/内存/文件系统/驱动，MIT 6.1810 课程实践。</p>
+      <img src="https://img.shields.io/badge/Private-0072ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
     <td width="50%" align="center">
       <h3>🤖 Router-MVP</h3>
       <p><em>PyTorch · Transformers</em></p>
-      <p>Learned router vs. fixed topology for multi-agent systems. 3-sigma statistical validation on A100.</p>
-      <img src="https://img.shields.io/badge/Private_Repo-00c6ff?style=for-the-badge&logo=github&logoColor=white" />
+      <p>可微路由 vs 固定拓扑的多智能体通信研究，A100 上完成 3-sigma 统计验证。</p>
+      <img src="https://img.shields.io/badge/Private-00c6ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center">
       <h3>🔧 Pipeline CPU</h3>
       <p><em>Verilog · Vivado · FPGA</em></p>
-      <p>5-stage pipeline CPU with full forwarding, hazard detection, and stall/flush logic. FPGA-synthesized.</p>
-      <img src="https://img.shields.io/badge/Private_Repo-0072ff?style=for-the-badge&logo=github&logoColor=white" />
+      <p>5 级流水线 CPU，完整转发/冒险检测/暂停冲刷逻辑，FPGA 综合验证。</p>
+      <img src="https://img.shields.io/badge/Private-0072ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
     <td width="50%" align="center">
-      <h3>📁 File Management Tool</h3>
+      <h3>📁 File Management</h3>
       <p><em>C# ASP.NET Core · MVC</em></p>
-      <p>Full-stack web app with Strategy Pattern: compress, scan, git load, and clean operations.</p>
-      <img src="https://img.shields.io/badge/Private_Repo-00c6ff?style=for-the-badge&logo=github&logoColor=white" />
+      <p>Docker 化文件管理工具：上传/压缩/扫描/Git 提交，策略模式架构。</p>
+      <img src="https://img.shields.io/badge/Private-00c6ff?style=for-the-badge&logo=github&logoColor=white" />
     </td>
   </tr>
 </table>
 
----
-
-## 🎯 Current Focus
+## 🎯 当前方向
 
 <p align="center">
-  <img src="https://img.shields.io/badge/-Graduation%20Thesis%3A%20VQA%20for%20Remote%20Sensing-00C6FF?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/-Multi-Agent%20Routing%20Research-0072FF?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/-Large-Scale%20Distributed%20Training-00C6FF?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/-毕业设计%3A%20遥感%20VQA-00C6FF?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/-多智能体路由研究-0072FF?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/-大规模分布式训练-00C6FF?style=for-the-badge" />
 </p>
 
-## 📖 Education
+## 📖 教育背景
 
-- **Wuhan University** · B.S. in Computer Science (2022–2026)
-- **Thesis:** Design and Implementation of Visual Question Answering System for High-Resolution Remote Sensing Imagery
-- **Key Coursework:** Compilers · Operating Systems · Computer Architecture · Machine Learning · Deep Learning · Embedded Systems · Software Engineering
+- **武汉大学** · 计算机科学与技术（2022–2026）
+- **毕业设计**：面向高分辨率遥感影像的视觉问答系统设计与实现
+- **核心课程**：编译原理 · 操作系统 · 计算机组成 · 机器学习 · 深度学习 · 嵌入式系统 · 软件工程
 
 ---
 
-## ❓ FAQ
+## ❓ 常见问题
 
-| Question | Answer |
-|----------|--------|
-| **Why are most repos private?** | University coursework containing personal academic info and credentials. Contact me for access. |
-| **What's your primary tech stack?** | Python (PyTorch/MindSpore) for AI; C/C++ for systems; C# ASP.NET for web; Verilog for hardware. |
-| **Are you open to collaboration?** | Yes — email me at wjh19@whu.edu.cn for research or OSS collaboration. |
-| **What is your thesis about?** | Visual Question Answering (VQA) for high-resolution remote sensing imagery — combining CV and NLP. |
+| 问题 | 回答 |
+|------|------|
+| **为什么大部分仓库是私有的？** | 课程项目包含个人信息，如有需要请联系 wjh19@whu.edu.cn |
+| **主要技术栈是什么？** | AI 方向 Python (PyTorch/MindSpore)；系统方向 C/C++；Web 方向 C# ASP.NET；硬件 Verilog |
+| **是否接受合作？** | 欢迎，研究或开源均可，联系 wjh19@whu.edu.cn |
+| **毕业设计做什么？** | 高分辨率遥感影像的视觉问答（VQA），结合 CV 与 NLP |
 
 ---
 
