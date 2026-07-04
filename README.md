@@ -16,7 +16,7 @@
 ---
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=WJH-makers&theme=algolia&no-frame=true&no-bg=true&row=2&column=4&margin-w=10&margin-h=10" width="100%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=WJH-makers&theme=algolia" width="100%" />
 </p>
 
 ---
@@ -25,12 +25,10 @@
   <img src="https://metrics.lecoq.io/WJH-makers?template=classic&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=true&config.timezone=Asia%2FShanghai" width="100%" />
 </p>
 
----
-
-## 📊 GitHub Analytics
+---## 📊 GitHub Analytics
 
 <p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=WJH-makers&show_icons=true&count_private=true&hide_border=true&title_color=00c6ff&icon_color=00c6ff&text_color=c9d1d9&bg_color=0d1117" />
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=WJH-makers&theme=algolia" />
   <img width="49%" src="https://github-readme-activity-graph.vercel.app/graph?username=WJH-makers&bg_color=0d1117&color=00c6ff&line=0072ff&point=00c6ff&area=true&hide_border=true&radius=8" />
 </p>
 
