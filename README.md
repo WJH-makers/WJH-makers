@@ -134,7 +134,23 @@ Tooling       Git / GitHub Actions / SSH / PowerShell / MySQL / MyCLI / Neovim
   <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/WJH-makers/WJH-makers/output/github-contribution-grid-snake.svg" width="100%" />
 </picture>
 
+
 ---
+
+## 🧰 GitHub 工程化工具包
+
+我把公共仓库的常用 GitHub 技巧集中维护成三层：
+
+| 层级 | 仓库/文件 | 用途 |
+|---|---|---|
+| 个人主页 | [`WJH-makers/WJH-makers`](https://github.com/WJH-makers/WJH-makers) | 项目地图、技术栈、动态贡献图、公开作品集入口 |
+| 默认模板 | [`WJH-makers/.github`](https://github.com/WJH-makers/.github) | 默认 issue/PR 模板、贡献指南、安全策略、工作流模板 |
+| 新项目模板 | [`WJH-makers/readme-template`](https://github.com/WJH-makers/readme-template) | 新仓库 README、CI、Dependabot、发布前检查清单 |
+
+- ✅ 默认继承：`CONTRIBUTING.md`、`SECURITY.md`、`SUPPORT.md`、Issue Forms、PR Template。
+- ✅ 可复制模板：Dependabot、CodeQL、Dependency Review、Node/Python/Java/.NET CI、README Health Check。
+- ✅ 安全基线：不公开 `.env`、token、私钥、数据库 URI；安全问题走私密报告。
+- 📘 维护手册：[`docs/GITHUB-PLAYBOOK.md`](docs/GITHUB-PLAYBOOK.md)。
 
 ## ✍️ 最近在建设
 
