@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="mailto:wjh19@whu.edu.cn"><img src="https://img.shields.io/badge/Email-wjh19%40whu.edu.cn-ff4d4d?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://github.com/WJH-makers?tab=repositories"><img src="https://img.shields.io/badge/Public%20Repos-13-2d5da1?style=for-the-badge&logo=github&logoColor=white" alt="Public repositories" /></a>
+  <a href="https://github.com/WJH-makers?tab=repositories"><img src="https://img.shields.io/badge/Public%20Repos-15-2d5da1?style=for-the-badge&logo=github&logoColor=white" alt="Public repositories" /></a>
   <a href="https://github.com/WJH-makers/learning-blog"><img src="https://img.shields.io/badge/Learning%20Blog-每天复盘-fff9c4?style=for-the-badge&logo=vercel&logoColor=2d2d2d" alt="Learning blog" /></a>
   <img src="https://komarev.com/ghpvc/?username=WJH-makers&style=for-the-badge&color=2d5da1&label=PROFILE+VIEWS" alt="Profile views" />
 </p>
