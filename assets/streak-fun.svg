@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="120" viewBox="0 0 900 120">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F5E6D8"/>
+      <stop offset="50%" stop-color="#D97757"/>
+      <stop offset="100%" stop-color="#2D5DA1"/>
+    </linearGradient>
+    <style>
+      .t{font:700 16px 'Segoe UI',sans-serif;fill:#1C1917}
+      .s{font:600 12px 'Cascadia Code',monospace;fill:#5C5A55}
+      .hop{animation:h 1.6s ease-in-out infinite}
+      @keyframes h{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    </style>
+  </defs>
+  <rect width="900" height="120" rx="16" fill="#FFFCFA" stroke="#E8DFD4"/>
+  <rect x="0" y="0" width="10" height="120" fill="url(#g)"/>
+  <text x="36" y="42" class="t">今日运势：commit 顺利 · 测试全绿 · 文档不拖后腿</text>
+  <text x="36" y="70" class="s">motto: 能复现 · 能测试 · 能上线 · 能讲清楚</text>
+  <text x="36" y="96" class="s">hotkeys of life: git status → ship → sleep → repeat</text>
+  <g class="hop" transform="translate(780,28)">
+    <circle r="28" fill="#D97757"/>
+    <text text-anchor="middle" y="6" fill="#FFF" font-size="22">🚀</text>
+  </g>
+</svg>

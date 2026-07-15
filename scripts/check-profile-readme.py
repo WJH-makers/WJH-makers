@@ -10,7 +10,7 @@ text = readme.read_text(encoding="utf-8")
 required = [
     "WJH-makers/.github",
     "readme-template",
-    "GitHub 工程化",
+    "工程化",
     "<!-- AUTO:PROJECTS:START -->",
     "<!-- AUTO:PROJECTS:END -->",
     "<!-- AUTO:RECENT:START -->",
@@ -18,6 +18,7 @@ required = [
     "<!-- AUTO:META:START -->",
     "<!-- AUTO:META:END -->",
     "docs/PROFILE-AUTOMATION.md",
+    "assets/hero-banner.svg",
 ]
 missing = [item for item in required if item not in text]
 if missing:
