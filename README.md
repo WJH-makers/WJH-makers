@@ -211,9 +211,17 @@ Systems     xv6 · RISC-V · Compiler · FPGA CPU · Vivado
 Tooling     Git · Actions · SSH · Nginx · PowerShell · MySQL · Neovim · Typora
 ```
 
+<!--
+  Official github-readme-stats.vercel.app often returns 503 / rate-limit.
+  Use community mirrors + cache_seconds so GitHub Camo can fetch SVG.
+-->
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=WJH-makers&layout=compact&theme=default&hide_border=true&bg_color=faf9f5&title_color=d97757&text_color=1c1917&langs_count=8" height="165" alt="top langs" />
-  <img src="https://github-readme-stats.vercel.app/api?username=WJH-makers&show_icons=true&theme=default&hide_border=true&bg_color=faf9f5&title_color=d97757&icon_color=2d5da1&text_color=1c1917&ring_color=d97757" height="165" alt="stats" />
+  <a href="https://github.com/WJH-makers?tab=repositories">
+    <img src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=WJH-makers&layout=compact&langs_count=8&hide_border=true&bg_color=faf9f5&title_color=d97757&text_color=1c1917&cache_seconds=1800" width="380" height="165" alt="Top languages" />
+  </a>
+  <a href="https://github.com/WJH-makers">
+    <img src="https://github-readme-stats-one-bice.vercel.app/api?username=WJH-makers&show_icons=true&include_all_commits=true&count_private=false&hide_border=true&bg_color=faf9f5&title_color=d97757&icon_color=2d5da1&text_color=1c1917&ring_color=d97757&cache_seconds=1800" width="420" height="165" alt="GitHub stats" />
+  </a>
 </p>
 
 ---
