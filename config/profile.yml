@@ -1,0 +1,60 @@
+# =============================================================================
+# Profile automation config — 只改这里 + 各仓库的 description/topics/homepage
+# 生成器会读 GitHub API，写回 README 中 <!-- AUTO:* --> 区块
+# =============================================================================
+
+username: WJH-makers
+
+# 不出现在「精选项目」表中的仓库
+exclude:
+  - WJH-makers          # 本主页仓库
+  - Photos              # 相册/素材
+  - skills-introduction-to-github  # 教程克隆
+  - ".github"           # org 默认模板
+
+# 表顶优先展示（其余按最近 push 排序）
+featured:
+  - RingMOE
+  - router-mvp
+  - wjh-makers-learning-blog
+  - typora-theme-claude-like
+  - compiler-C-PLUS-PLUS
+  - xv6-riscv-riscv
+  - project4
+  - FileManagementTool
+  - FTP
+  - AIProxyHub
+
+# 表最大行数（含 featured）
+max_projects: 14
+
+# 覆盖 API 字段（仓库 description 太随意时用）
+overrides:
+  mysql:
+    description: Java / MySQL 课程与练习项目
+    skill: JDBC、SQL、后端基础
+  RingMOE:
+    skill: 大规模遥感预训练、并行训练、实验工程化
+  router-mvp:
+    skill: 多智能体通信、可学习路由、研究型 MVP
+  compiler-C-PLUS-PLUS:
+    skill: 编译器前端、AST、语义分析、中间表示
+  xv6-riscv-riscv:
+    skill: OS 内核、系统调用、内存/进程/文件系统
+  project4:
+    skill: 5 级流水线 CPU、数据冒险、FPGA 综合验证
+  FileManagementTool:
+    skill: Web 后端、文件处理、策略模式、Docker 化
+  FTP:
+    skill: 网络编程、断点续传、客户端/服务端协议
+  AIProxyHub:
+    skill: Windows 工具链整合、脚本自动化、打包发布
+  wjh-makers-learning-blog:
+    skill: 个人知识库、博客系统、Vercel/自托管部署
+  typora-theme-claude-like:
+    skill: 主题工程、双脚本字体、Mermaid 友好
+  readme-template:
+    skill: 工程化模板、README/CI 最佳实践
+
+# 「最近动态」条数
+recent_count: 6

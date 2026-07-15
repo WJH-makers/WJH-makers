@@ -27,6 +27,7 @@ This profile repository links the public-facing GitHub system for WJH-makers.
 - Starter workflow templates for Node/Python, Java Maven, .NET, CodeQL, dependency review, and README health checks.
 - Dependabot templates for GitHub Actions and common ecosystems.
 - Profile-specific README health workflow to catch missing local assets and broken internal references.
+- **Profile project table auto-sync** (`sync-profile.yml` + `scripts/generate_profile_readme.py`): public repos appear on the profile README from GitHub API + `config/profile.yml`. See [PROFILE-AUTOMATION.md](./PROFILE-AUTOMATION.md).
 
 ### Security
 

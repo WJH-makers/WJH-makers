@@ -33,7 +33,8 @@
 - 📝 仓库：[wjh-makers-learning-blog](https://github.com/WJH-makers/wjh-makers-learning-blog) · Vercel 镜像
 - 🎨 主题：[typora-theme-claude-like](https://github.com/WJH-makers/typora-theme-claude-like)
 
-> 🔒 私有仓库只抽象公开为经验（含 RSVQA 全栈、博客迭代、服务器运维）；不在 README 暴露密钥、内网端口或业务细节。
+> 🔒 私有仓库只抽象公开为经验（含 RSVQA 全栈、博客迭代、服务器运维）；不在 README 暴露密钥、内网端口或业务细节。  
+> ⚙️ **项目表自动同步**：新建公开仓库时写好 **description / topics / homepage**，主页会在 Actions 里自动更新（见 [docs/PROFILE-AUTOMATION.md](docs/PROFILE-AUTOMATION.md)）。
 
 ---
 
@@ -82,18 +83,24 @@
 
 ## 🧪 精选项目
 
-| 项目 | 技术 | 练到的能力 |
+<!-- AUTO:PROJECTS:START -->
+| 项目 | 技术 | 说明 / 练到的能力 |
 |---|---|---|
-| [RingMOE](https://github.com/WJH-makers/RingMOE) | Python · MindSpore · PyTorch · DeepSpeed | 大规模遥感预训练、并行训练 |
-| [router-mvp](https://github.com/WJH-makers/router-mvp) | Python · PyTorch | 多智能体、可学习路由、研究 MVP |
-| [compiler-C-PLUS-PLUS](https://github.com/WJH-makers/compiler-C-PLUS-PLUS) | Python · C++ | 编译器前端、AST、语义分析 |
-| [xv6-riscv-riscv](https://github.com/WJH-makers/xv6-riscv-riscv) | C · RISC-V | OS 内核、系统调用、内存/FS |
-| [project4](https://github.com/WJH-makers/project4) | Verilog · Vivado | 流水线 CPU、冒险检测、FPGA |
-| [FileManagementTool](https://github.com/WJH-makers/FileManagementTool) | C# · ASP.NET Core | Web 后端、策略模式、Docker |
-| [FTP](https://github.com/WJH-makers/FTP) | C# · C WinSock | 断点续传、C/S 协议 |
-| [AIProxyHub](https://github.com/WJH-makers/AIProxyHub) | Python · PowerShell · NSIS | Windows 工具链整合与打包 |
-| [wjh-makers-learning-blog](https://github.com/WJH-makers/wjh-makers-learning-blog) | Next.js · TypeScript | 知识库、部署、UI |
-| [typora-theme-claude-like](https://github.com/WJH-makers/typora-theme-claude-like) | CSS · 字体 | 主题工程、双脚本字体、Mermaid |
+| [RingMOE](https://github.com/WJH-makers/RingMOE) | Python | 大规模遥感预训练、并行训练、实验工程化 |
+| [router-mvp](https://github.com/WJH-makers/router-mvp) | Python | 多智能体通信、可学习路由、研究型 MVP |
+| [wjh-makers-learning-blog](https://github.com/WJH-makers/wjh-makers-learning-blog) · [site](https://wjh-makers-learning-blog.vercel.app) | TypeScript · blog · learning journal · nextjs | 个人知识库、博客系统、Vercel/自托管部署 |
+| [typora-theme-claude-like](https://github.com/WJH-makers/typora-theme-claude-like) | CSS | 主题工程、双脚本字体、Mermaid 友好 |
+| [compiler-C-PLUS-PLUS](https://github.com/WJH-makers/compiler-C-PLUS-PLUS) | Python · c plus plus · compiler | 编译器前端、AST、语义分析、中间表示 |
+| [xv6-riscv-riscv](https://github.com/WJH-makers/xv6-riscv-riscv) | C | OS 内核、系统调用、内存/进程/文件系统 |
+| [project4](https://github.com/WJH-makers/project4) | Verilog | 5 级流水线 CPU、数据冒险、FPGA 综合验证 |
+| [FileManagementTool](https://github.com/WJH-makers/FileManagementTool) | C# | Web 后端、文件处理、策略模式、Docker 化 |
+| [FTP](https://github.com/WJH-makers/FTP) | C# | 网络编程、断点续传、客户端/服务端协议 |
+| [AIProxyHub](https://github.com/WJH-makers/AIProxyHub) | HTML | Windows 工具链整合、脚本自动化、打包发布 |
+| [readme-template](https://github.com/WJH-makers/readme-template) | documentation · github actions · github template · project template | 工程化模板、README/CI 最佳实践 |
+| [mysql](https://github.com/WJH-makers/mysql) | Java | JDBC、SQL、后端基础 |
+
+<sub>本表由 <code>scripts/generate_profile_readme.py</code> 根据公开仓库 API + <code>config/profile.yml</code> 自动生成。新仓库写好 description/topics 即可入表。</sub>
+<!-- AUTO:PROJECTS:END -->
 
 ---
 
@@ -149,14 +156,27 @@ Tooling     Git · Actions · SSH · Nginx · PowerShell · MySQL · Neovim · T
 
 | 层级 | 仓库 | 用途 |
 |---|---|---|
-| 个人主页 | [WJH-makers/WJH-makers](https://github.com/WJH-makers/WJH-makers) | 作品地图、动态贡献图 |
+| 个人主页 | [WJH-makers/WJH-makers](https://github.com/WJH-makers/WJH-makers) | 作品地图、动态贡献图、**项目表自动同步** |
 | 默认模板 | [WJH-makers/.github](https://github.com/WJH-makers/.github) | Issue/PR/安全策略/工作流模板 |
 | 新项目模板 | [WJH-makers/readme-template](https://github.com/WJH-makers/readme-template) | README · CI · Dependabot 清单 |
 | Typora 主题 | [typora-theme-claude-like](https://github.com/WJH-makers/typora-theme-claude-like) | Claude 气质编辑主题 |
 
 - 默认继承：`CONTRIBUTING` · `SECURITY` · Issue Forms · PR Template  
 - 安全基线：**不**公开 `.env`、token、私钥、数据库 URI  
-- 手册：[docs/GITHUB-PLAYBOOK.md](docs/GITHUB-PLAYBOOK.md)
+- 手册：[docs/GITHUB-PLAYBOOK.md](docs/GITHUB-PLAYBOOK.md) · 自动化：[docs/PROFILE-AUTOMATION.md](docs/PROFILE-AUTOMATION.md)
+
+---
+
+## ✍️ 最近动态
+
+<!-- AUTO:RECENT:START -->
+- **[typora-theme-claude-like](https://github.com/WJH-makers/typora-theme-claude-like)** · `2026-07-15` — Typora theme: Claude-like warm cream paper, dual-script fonts, Mermaid-ready (v37/v38)
+- **[wjh-makers-learning-blog](https://github.com/WJH-makers/wjh-makers-learning-blog)** · `2026-07-12` — 个人学习成果博客：记录 Java 全栈、Git、MySQL、AI 与工程配置复盘，部署到 Vercel
+- **[readme-template](https://github.com/WJH-makers/readme-template)** · `2026-07-05` — README.md template for new projects — 2026 best practices
+- **[mysql](https://github.com/WJH-makers/mysql)** · `2026-07-04` — 这是我的java项目
+- **[AIProxyHub](https://github.com/WJH-makers/AIProxyHub)** · `2026-07-04` — AIProxyHub（二次修改版）：Windows 一键整合 CLIProxyAPI + 注册 + 本地面板 + 透明网关缓存池，并可打包为 EXE/安装包。
+- **[router-mvp](https://github.com/WJH-makers/router-mvp)** · `2026-07-04` — Research MVP: learned router vs fixed topology for multi-agent systems
+<!-- AUTO:RECENT:END -->
 
 ---
 
@@ -165,12 +185,17 @@ Tooling     Git · Actions · SSH · Nginx · PowerShell · MySQL · Neovim · T
 - 📝 [学习博客](https://wwjjhh.online) / [源码](https://github.com/WJH-makers/wjh-makers-learning-blog)：Java 全栈 · Git · MySQL · AI · 工程复盘  
 - 🎨 [Claude Like 主题](https://github.com/WJH-makers/typora-theme-claude-like)：双脚本字体 · Mermaid 11.x  
 - ☕ Java / 校招笔记：命令、踩坑与知识卡片持续沉淀  
+- ⚙️ Profile：**仓库列表自动生成**，不再每推一个库就手改主页  
 
 <p align="center">
   <a href="https://wwjjhh.online"><img src="https://img.shields.io/badge/Open-wwjjhh.online-2d5da1?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open site" /></a>
   <a href="https://github.com/WJH-makers/wjh-makers-learning-blog"><img src="https://img.shields.io/badge/Read-learning%20journal-2d5da1?style=for-the-badge&logo=github&logoColor=white" alt="Learning journal" /></a>
   <a href="https://github.com/WJH-makers/typora-theme-claude-like"><img src="https://img.shields.io/badge/Typora-Claude%20Like-d97757?style=for-the-badge" alt="Typora theme" /></a>
 </p>
+
+<!-- AUTO:META:START -->
+<sub>自动同步 · 2026-07-15 01:33 UTC · 公开非 fork 仓库 **16** 个 · 表内展示 **12** 个 · 语言分布：Python×4, C#×2, C×1, CSS×1, HTML×1, Java×1, TypeScript×1, Verilog×1</sub>
+<!-- AUTO:META:END -->
 
 ---
 
