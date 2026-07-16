@@ -276,8 +276,8 @@ Tooling     Git · Actions · SSH · Nginx · PowerShell · MySQL · Neovim · T
 ## ✍️ 最近动态 · Radar
 
 <!-- AUTO:RECENT:START -->
+- **[wjh-makers-learning-blog](https://github.com/WJH-makers/wjh-makers-learning-blog)** · `2026-07-16` — 个人学习成果博客：记录 Java 全栈、Git、MySQL、AI 与工程配置复盘，部署到 Vercel
 - **[typora-theme-claude-like](https://github.com/WJH-makers/typora-theme-claude-like)** · `2026-07-15` — Typora theme: Claude-like warm cream paper, dual-script fonts, Mermaid-ready (v37/v38)
-- **[wjh-makers-learning-blog](https://github.com/WJH-makers/wjh-makers-learning-blog)** · `2026-07-12` — 个人学习成果博客：记录 Java 全栈、Git、MySQL、AI 与工程配置复盘，部署到 Vercel
 - **[readme-template](https://github.com/WJH-makers/readme-template)** · `2026-07-05` — README.md template for new projects — 2026 best practices
 - **[mysql](https://github.com/WJH-makers/mysql)** · `2026-07-04` — 这是我的java项目
 - **[AIProxyHub](https://github.com/WJH-makers/AIProxyHub)** · `2026-07-04` — AIProxyHub（二次修改版）：Windows 一键整合 CLIProxyAPI + 注册 + 本地面板 + 透明网关缓存池，并可打包为 EXE/安装包。
@@ -299,7 +299,7 @@ Tooling     Git · Actions · SSH · Nginx · PowerShell · MySQL · Neovim · T
 </p>
 
 <!-- AUTO:META:START -->
-<sub>自动同步 · 2026-07-16 08:36 UTC · 公开非 fork 仓库 **16** 个 · 表内展示 **12** 个 · 语言分布：Python×4, C#×2, C×1, CSS×1, HTML×1, Java×1, TypeScript×1, Verilog×1</sub>
+<sub>自动同步 · 2026-07-16 14:26 UTC · 公开非 fork 仓库 **16** 个 · 表内展示 **12** 个 · 语言分布：Python×4, C#×2, C×1, CSS×1, HTML×1, Java×1, TypeScript×1, Verilog×1</sub>
 <!-- AUTO:META:END -->
 
 ---
