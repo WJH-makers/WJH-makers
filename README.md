@@ -81,8 +81,13 @@ Docker · Git · Actions · Nginx · MySQL · xv6 · FPGA
 
 
 
+<!-- AUTO:META:START -->
+<sub>自动同步</sub>
+<!-- AUTO:META:END -->
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:fff9c4,40:d97757,75:2d5da1,100:1c1917&height=100&section=footer&animation=twinkling&text=Thanks+for+visiting&fontSize=14&fontColor=faf9f5&fontAlignY=70" width="100%" alt="footer" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:fff9c4,40:d97757,75:2d5da1,100:1c1917&height=100&section=footer&animation=twinkling&text=Thanks+for+visiting&fontSize=14&fontColor=faf9f5&fontAlignY=70" width="100%" alt="footer />
 </p>
+
 
 
