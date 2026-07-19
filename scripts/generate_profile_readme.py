@@ -27,7 +27,6 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -299,10 +298,10 @@ def render_meta(grouped: list[tuple[str, str, list[dict]]], pub: list[dict]) -> 
         for k, v in sorted(langs.items(), key=lambda kv: (-kv[1], kv[0]))[:8]
     )
     shown = sum(len(items) for _, _, items in grouped)
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     return (
-        f"<sub>🤖 自动同步 · {now} · 公开非 fork 仓库 <b>{len(pub)}</b> 个 · "
-        f"项目表展示 <b>{shown}</b> 个 · 语言分布：{top_langs or '—'}</sub>"
+        f"<sub>🤖 项目 / 语言 / 动态由 GitHub Actions 依公开仓库自动同步 · "
+        f"公开非 fork 仓库 <b>{len(pub)}</b> 个 · 项目表展示 <b>{shown}</b> 个 · "
+        f"语言分布：{top_langs or '—'}</sub>"
     )
 
 
