@@ -9,10 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://wwjjhh.online"><img alt="Blog" src="https://img.shields.io/badge/Blog-wwjjhh.online-000000?style=flat-square&logo=vercel&logoColor=white"></a>
-  <a href="mailto:wjh19@whu.edu.cn"><img alt="Email" src="https://img.shields.io/badge/Email-wjh19@whu.edu.cn-D14836?style=flat-square&logo=gmail&logoColor=white"></a>
-  <a href="https://github.com/WJH-makers?tab=repositories"><img alt="Public Repos" src="https://img.shields.io/badge/dynamic/json?style=flat-square&logo=github&label=Public%20Repos&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2FWJH-makers&color=2ea44f"></a>
-  <a href="https://github.com/WJH-makers?tab=followers"><img alt="Followers" src="https://img.shields.io/github/followers/WJH-makers?style=flat-square&logo=github&label=Followers&color=2ea44f"></a>
+  <a href="https://wwjjhh.online">🌐 学习博客</a>　·　<a href="mailto:wjh19@whu.edu.cn">📧 wjh19@whu.edu.cn</a>　·　<a href="https://github.com/WJH-makers?tab=repositories">📦 全部仓库</a>
 </p>
 
 ---
@@ -98,51 +95,13 @@ Verilog     ██████░░░░░░░░░░░░░░░░  
 
 ### 🧰 技术栈
 
-**AI / ML**
+**🧠 AI / ML**　`PyTorch` `Transformers` `DeepSpeed` `MindSpore` `CUDA`
 
-<p>
-  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white">
-  <img alt="Transformers" src="https://img.shields.io/badge/Transformers-FFD21E?style=flat-square&logo=huggingface&logoColor=black">
-  <img alt="DeepSpeed" src="https://img.shields.io/badge/DeepSpeed-1E90FF?style=flat-square">
-  <img alt="MindSpore" src="https://img.shields.io/badge/MindSpore-0A7CFF?style=flat-square">
-  <img alt="CUDA" src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white">
-</p>
+**⌨️ 语言**　`Python` `TypeScript` `Java` `C` `C++` `C#` `Verilog` `SQL`
 
-**语言**
+**🌐 Web / 后端**　`Next.js` `React` `FastAPI` `ASP.NET` `Spring` `Vercel`
 
-<p>
-  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
-  <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white">
-  <img alt="C" src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black">
-  <img alt="C++" src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white">
-  <img alt="C#" src="https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=csharp&logoColor=white">
-  <img alt="Verilog" src="https://img.shields.io/badge/Verilog-AA1F2E?style=flat-square">
-  <img alt="SQL" src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white">
-</p>
-
-**Web / 后端**
-
-<p>
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white">
-  <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB">
-  <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white">
-  <img alt="ASP.NET" src="https://img.shields.io/badge/ASP.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white">
-  <img alt="Spring" src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white">
-  <img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white">
-</p>
-
-**系统 / 工具**
-
-<p>
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
-  <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white">
-  <img alt="GitHub Actions" src="https://img.shields.io/badge/Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white">
-  <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black">
-  <img alt="Nginx" src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white">
-  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white">
-  <img alt="RISC-V" src="https://img.shields.io/badge/RISC--V-283272?style=flat-square&logo=riscv&logoColor=white">
-</p>
+**⚙️ 系统 / 工具**　`Docker` `Git` `GitHub Actions` `Linux` `Nginx` `MySQL` `RISC-V`
 
 ---
 
