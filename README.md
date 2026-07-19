@@ -1,7 +1,7 @@
 <h1 align="center">万佳泓　·　WJH-makers</h1>
 
 <p align="center">
-  武汉大学　·　计算机科学　·　2026 届　│　AI / 遥感 VQA　·　系统　·　全栈
+  武汉大学 CS · 2026 届　│　遥感视觉问答 · MoE 预训练 · 多智能体路由　│　兼修 编译器 / OS / 全栈
 </p>
 
 <p align="center">
@@ -76,21 +76,12 @@
 
 ---
 
-### 🔤 语言分布
+### 📈 数据一览
 
-<!-- AUTO:LANGS:START -->
-```text
-Python      ██████████████████████   4 repo · 33.3%
-C#          ███████████░░░░░░░░░░░   2 repo · 16.7%
-C           ██████░░░░░░░░░░░░░░░░   1 repo ·  8.3%
-CSS         ██████░░░░░░░░░░░░░░░░   1 repo ·  8.3%
-HTML        ██████░░░░░░░░░░░░░░░░   1 repo ·  8.3%
-Java        ██████░░░░░░░░░░░░░░░░   1 repo ·  8.3%
-TypeScript  ██████░░░░░░░░░░░░░░░░   1 repo ·  8.3%
-Verilog     ██████░░░░░░░░░░░░░░░░   1 repo ·  8.3%
-```
-<!-- AUTO:LANGS:END -->
-
+<p align="center">
+  <img src="profile-summary-card-output/transparent/1-repos-per-language.svg" width="49%" alt="语言分布"/>
+  <img src="profile-summary-card-output/transparent/3-stats.svg" width="49%" alt="GitHub 统计"/>
+</p>
 ---
 
 ### 🧰 技术栈

@@ -17,8 +17,6 @@ text = readme.read_text(encoding="utf-8")
 required_markers = [
     "<!-- AUTO:PROJECTS:START -->",
     "<!-- AUTO:PROJECTS:END -->",
-    "<!-- AUTO:LANGS:START -->",
-    "<!-- AUTO:LANGS:END -->",
     "<!-- AUTO:RECENT:START -->",
     "<!-- AUTO:RECENT:END -->",
     "<!-- AUTO:META:START -->",

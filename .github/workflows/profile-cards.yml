@@ -26,4 +26,5 @@ jobs:
         with:
           USERNAME: ${{ github.repository_owner }}
           UTC_OFFSET: 8
+          THEME: transparent
           BRANCH_NAME: main

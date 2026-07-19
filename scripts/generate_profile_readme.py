@@ -4,9 +4,8 @@ Generate AUTO sections in profile README from GitHub API + config/profile.yml.
 
 AUTO blocks produced:
   PROJECTS  — 项目按方向分组的表（config.groups 决定分组与顺序）
-  LANGS     — 语言分布 Unicode 条形（公开非 fork 仓库主语言计数）
   RECENT    — 最近 push 的公开仓库
-  META      — 自动同步元信息（时间 / 仓库数）
+  META      — 自动同步元信息（仓库数 / 语言分布）
 
 Usage:
   python scripts/generate_profile_readme.py
@@ -37,10 +36,6 @@ MARKERS = {
     "projects": (
         "<!-- AUTO:PROJECTS:START -->",
         "<!-- AUTO:PROJECTS:END -->",
-    ),
-    "langs": (
-        "<!-- AUTO:LANGS:START -->",
-        "<!-- AUTO:LANGS:END -->",
     ),
     "recent": (
         "<!-- AUTO:RECENT:START -->",
@@ -239,30 +234,6 @@ def render_projects(grouped: list[tuple[str, str, list[dict]]], max_n: int) -> s
     return "\n".join(out)
 
 
-def render_langs(pub: list[dict], cfg: dict) -> str:
-    n = int(cfg.get("lang_bar_count") or 8)
-    counts: dict[str, int] = {}
-    for r in pub:
-        lang = r.get("language")
-        if lang:
-            counts[lang] = counts.get(lang, 0) + 1
-    if not counts:
-        return "_暂无语言数据_"
-    total = sum(counts.values())
-    top = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[:n]
-    max_c = max(c for _, c in top)
-    width = 22
-    label_w = max(len(k) for k, _ in top)
-    lines = ["```text"]
-    for lang, c in top:
-        filled = max(1, round(width * c / max_c))
-        bar = "█" * filled + "░" * (width - filled)
-        pct = 100.0 * c / total
-        lines.append(f"{lang:<{label_w}}  {bar}  {c:>2} repo · {pct:4.1f}%")
-    lines.append("```")
-    return "\n".join(lines)
-
-
 def render_recent(repos: list[dict], cfg: dict) -> str:
     exclude = set(cfg.get("exclude") or [])
     overrides = cfg.get("overrides") or {}
@@ -326,7 +297,6 @@ def generate(readme_text: str, cfg: dict, token: str | None) -> str:
 
     text = readme_text
     text = replace_block(text, *MARKERS["projects"], render_projects(grouped, max_n))
-    text = replace_block(text, *MARKERS["langs"], render_langs(pub, cfg))
     text = replace_block(text, *MARKERS["recent"], render_recent(repos, cfg))
     text = replace_block(text, *MARKERS["meta"], render_meta(grouped, pub))
     if not text.endswith("\n"):
