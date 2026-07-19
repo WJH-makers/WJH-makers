@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""Profile README 健康检查：AUTO 标记齐全 + 自动化文件在位 + 本地引用不悬空。
+
+与 scripts/generate_profile_readme.py 的 MARKERS 对齐。跑法：
+  python scripts/check-profile-readme.py
+"""
 from pathlib import Path
 import re
 
@@ -7,33 +13,29 @@ if not readme.exists():
     raise SystemExit("README.md is missing")
 text = readme.read_text(encoding="utf-8")
 
-required = [
-    "WJH-makers/.github",
-    "readme-template",
-    "工程化",
+# 1) 生成器依赖的 AUTO 标记必须成对齐全
+required_markers = [
     "<!-- AUTO:PROJECTS:START -->",
     "<!-- AUTO:PROJECTS:END -->",
+    "<!-- AUTO:LANGS:START -->",
+    "<!-- AUTO:LANGS:END -->",
     "<!-- AUTO:RECENT:START -->",
     "<!-- AUTO:RECENT:END -->",
     "<!-- AUTO:META:START -->",
     "<!-- AUTO:META:END -->",
-    "docs/PROFILE-AUTOMATION.md",
-    "assets/hero-banner.svg",
 ]
-missing = [item for item in required if item not in text]
+missing = [m for m in required_markers if m not in text]
 if missing:
-    raise SystemExit("README missing required pieces: " + ", ".join(missing))
+    raise SystemExit("README missing AUTO markers: " + ", ".join(missing))
 
-cfg = root / "config" / "profile.yml"
-if not cfg.exists():
-    raise SystemExit("config/profile.yml is missing")
+# 2) 自动化关键文件在位
+for rel in ("config/profile.yml", "scripts/generate_profile_readme.py"):
+    if not (root / rel).exists():
+        raise SystemExit(f"{rel} is missing")
 
-gen = root / "scripts" / "generate_profile_readme.py"
-if not gen.exists():
-    raise SystemExit("scripts/generate_profile_readme.py is missing")
-
+# 3) 本地引用（相对路径的 src/href/srcset）不能悬空；外链与 mailto 跳过
 local_refs = set()
-for match in re.finditer(r'(?:src|href)="([^"#]+)"', text):
+for match in re.finditer(r'(?:src|href|srcset)="([^"#]+)"', text):
     value = match.group(1)
     if value.startswith(("http://", "https://", "mailto:")):
         continue

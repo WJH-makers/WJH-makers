@@ -1,60 +1,89 @@
 # =============================================================================
 # Profile automation config — 只改这里 + 各仓库的 description/topics/homepage
-# 生成器会读 GitHub API，写回 README 中 <!-- AUTO:* --> 区块
+# 生成器读 GitHub API，写回 README 的 <!-- AUTO:* --> 区块：
+#   分组项目表 / 语言分布条 / 最近动态 / 元信息
 # =============================================================================
 
 username: WJH-makers
 
-# 不出现在「精选项目」表中的仓库
+# 不出现在项目表中的仓库
 exclude:
-  - WJH-makers          # 本主页仓库
-  - Photos              # 相册/素材
+  - WJH-makers                     # 本主页仓库
+  - Photos                         # 相册/素材
   - skills-introduction-to-github  # 教程克隆
-  - ".github"           # org 默认模板
+  - ".github"                      # org 默认模板
 
-# 表顶优先展示（其余按最近 push 排序）
-featured:
-  - RingMOE
-  - router-mvp
-  - wjh-makers-learning-blog
-  - typora-theme-claude-like
-  - compiler-C-PLUS-PLUS
-  - xv6-riscv-riscv
-  - project4
-  - FileManagementTool
-  - FTP
-  - AIProxyHub
+# 方向分组：决定项目归入 README 哪一栏。
+#   组顺序      = 展示顺序
+#   组内 repos  = 行顺序
+# 未在任何组列出的公开仓库会自动归入「🗂 其它」，不会丢失。
+groups:
+  - key: ai
+    title: "🧠 AI · 研究"
+    blurb: 遥感 VQA · MoE 预训练 · 多智能体
+    repos:
+      - RingMOE
+      - router-mvp
+  - key: sys
+    title: "⚙️ 系统 · 底层"
+    blurb: 编译器 · 操作系统 · 体系结构
+    repos:
+      - compiler-C-PLUS-PLUS
+      - xv6-riscv-riscv
+      - project4
+  - key: web
+    title: "🌐 全栈 · Web"
+    blurb: Next.js · FastAPI · ASP.NET · Spring
+    repos:
+      - wjh-makers-learning-blog
+      - FileManagementTool
+      - mysql
+  - key: tool
+    title: "🔧 工具 · 生态"
+    blurb: 工具链 · 编辑器主题 · 工程模板
+    repos:
+      - AIProxyHub
+      - FTP
+      - typora-theme-claude-like
+      - readme-template
 
-# 表最大行数（含 featured）
-max_projects: 14
+# 项目表总行数上限（保护性，正常用不到）
+max_projects: 20
+
+# 语言分布条展示前 N 种（按公开非 fork 仓库主语言计数）
+lang_bar_count: 9
+
+# 「最近动态」条数
+recent_count: 6
 
 # 覆盖 API 字段（仓库 description 太随意时用）
+#   skill        → 项目表「练到的能力」列
+#   description  → 最近动态里的说明（覆盖仓库原 description）
 overrides:
-  mysql:
-    description: Java / MySQL 课程与练习项目
-    skill: JDBC、SQL、后端基础
   RingMOE:
     skill: 大规模遥感预训练、并行训练、实验工程化
+    description: 面向遥感的大规模 MoE 预训练（MindSpore + PyTorch / DeepSpeed）
   router-mvp:
     skill: 多智能体通信、可学习路由、研究型 MVP
   compiler-C-PLUS-PLUS:
     skill: 编译器前端、AST、语义分析、中间表示
+    description: 编译原理大作业：C++ 子集编译器
   xv6-riscv-riscv:
-    skill: OS 内核、系统调用、内存/进程/文件系统
+    skill: OS 内核、系统调用、内存 / 进程 / 文件系统
   project4:
     skill: 5 级流水线 CPU、数据冒险、FPGA 综合验证
+  wjh-makers-learning-blog:
+    skill: 全栈博客、知识库、Vercel 部署
   FileManagementTool:
     skill: Web 后端、文件处理、策略模式、Docker 化
-  FTP:
-    skill: 网络编程、断点续传、客户端/服务端协议
+  mysql:
+    skill: JDBC、SQL、后端基础
+    description: Java / MySQL 课程与练习项目
   AIProxyHub:
     skill: Windows 工具链整合、脚本自动化、打包发布
-  wjh-makers-learning-blog:
-    skill: 个人知识库、博客系统、Vercel/自托管部署
+  FTP:
+    skill: 网络编程、断点续传、客户端 / 服务端协议
   typora-theme-claude-like:
     skill: 主题工程、双脚本字体、Mermaid 友好
   readme-template:
-    skill: 工程化模板、README/CI 最佳实践
-
-# 「最近动态」条数
-recent_count: 6
+    skill: 工程化模板、README / CI 最佳实践

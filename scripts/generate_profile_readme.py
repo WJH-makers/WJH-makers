@@ -2,6 +2,12 @@
 """
 Generate AUTO sections in profile README from GitHub API + config/profile.yml.
 
+AUTO blocks produced:
+  PROJECTS  — 项目按方向分组的表（config.groups 决定分组与顺序）
+  LANGS     — 语言分布 Unicode 条形（公开非 fork 仓库主语言计数）
+  RECENT    — 最近 push 的公开仓库
+  META      — 自动同步元信息（时间 / 仓库数）
+
 Usage:
   python scripts/generate_profile_readme.py
   python scripts/generate_profile_readme.py --dry-run
@@ -33,6 +39,10 @@ MARKERS = {
         "<!-- AUTO:PROJECTS:START -->",
         "<!-- AUTO:PROJECTS:END -->",
     ),
+    "langs": (
+        "<!-- AUTO:LANGS:START -->",
+        "<!-- AUTO:LANGS:END -->",
+    ),
     "recent": (
         "<!-- AUTO:RECENT:START -->",
         "<!-- AUTO:RECENT:END -->",
@@ -51,20 +61,13 @@ def load_config() -> dict:
 
         data = yaml.safe_load(text)
     except ImportError:
-        # Minimal YAML subset for this file (no nested lists of maps beyond overrides)
-        data = _minimal_yaml(text)
+        raise SystemExit(
+            "PyYAML is required. Install: pip install pyyaml\n"
+            "Or in CI: pip install -r scripts/requirements.txt"
+        )
     if not isinstance(data, dict):
         raise SystemExit("config/profile.yml must be a mapping")
     return data
-
-
-def _minimal_yaml(text: str) -> dict:
-    """Fallback parser for our flat-ish profile.yml without PyYAML."""
-    # Prefer json if someone converted; else require pyyaml for full fidelity
-    raise SystemExit(
-        "PyYAML is required. Install: pip install pyyaml\n"
-        "Or in CI: pip install -r scripts/requirements.txt"
-    )
 
 
 def gh_get(url: str, token: str | None) -> object:
@@ -118,8 +121,7 @@ def esc_cell(s: str) -> str:
 def lang_tech(repo: dict) -> str:
     lang = repo.get("language") or ""
     topics = repo.get("topics") or []
-    # Prefer language + up to 3 topics not repeating language
-    parts = []
+    parts: list[str] = []
     if lang:
         parts.append(lang)
     for t in topics:
@@ -148,80 +150,128 @@ def description_for(name: str, repo: dict, overrides: dict) -> str:
     o = overrides.get(name) or {}
     if o.get("description"):
         return esc_cell(str(o["description"]))
-    return esc_cell(repo.get("description") or "（无 description，可在仓库设置里补一句）")
+    return esc_cell(repo.get("description") or "")
 
 
-def select_projects(repos: list[dict], cfg: dict) -> list[dict]:
-    exclude = set(cfg.get("exclude") or [])
-    featured = list(cfg.get("featured") or [])
-    max_n = int(cfg.get("max_projects") or 12)
-    overrides = cfg.get("overrides") or {}
-
-    by_name = {
-        r["name"]: r
+def public_repos(repos: list[dict]) -> list[dict]:
+    """公开、非 fork、未归档 —— 代表本人真实产出（不套项目表 exclude）。"""
+    return [
+        r
         for r in repos
-        if not r.get("fork")
-        and not r.get("private")
-        and not r.get("archived")
-        and r["name"] not in exclude
-    }
+        if not r.get("fork") and not r.get("private") and not r.get("archived")
+    ]
 
-    ordered: list[dict] = []
-    seen: set[str] = set()
-    for name in featured:
-        if name in by_name and name not in seen:
-            ordered.append(by_name[name])
-            seen.add(name)
-    # rest by pushed_at
-    rest = sorted(
-        (r for n, r in by_name.items() if n not in seen),
-        key=lambda r: r.get("pushed_at") or "",
-        reverse=True,
-    )
-    ordered.extend(rest)
-    ordered = ordered[:max_n]
 
-    # attach display fields
-    for r in ordered:
+def curated_by_name(repos: list[dict], cfg: dict) -> dict[str, dict]:
+    """进入项目表候选：公开非 fork 非归档，且不在 exclude。"""
+    exclude = set(cfg.get("exclude") or [])
+    return {r["name"]: r for r in public_repos(repos) if r["name"] not in exclude}
+
+
+def group_projects(by_name: dict[str, dict], cfg: dict) -> list[tuple[str, str, list[dict]]]:
+    """返回 [(title, blurb, [repo,...]), ...]；未分组仓库归入「🗂 其它」。"""
+    overrides = cfg.get("overrides") or {}
+    groups_cfg = cfg.get("groups") or []
+    used: set[str] = set()
+    out: list[tuple[str, str, list[dict]]] = []
+
+    def attach(r: dict) -> dict:
         name = r["name"]
         r["_tech"] = lang_tech(r)
         r["_skill"] = skill_for(name, r, overrides)
-        r["_desc"] = description_for(name, r, overrides)
-    return ordered
+        return r
 
+    for g in groups_cfg:
+        items: list[dict] = []
+        for nm in g.get("repos") or []:
+            if nm in by_name and nm not in used:
+                items.append(attach(by_name[nm]))
+                used.add(nm)
+        if items:
+            title = str(g.get("title") or g.get("key") or "项目")
+            out.append((title, str(g.get("blurb") or ""), items))
 
-def render_projects(projects: list[dict]) -> str:
-    lines = [
-        "| 项目 | 技术 | 说明 / 练到的能力 |",
-        "|---|---|---|",
-    ]
-    for r in projects:
-        name = r["name"]
-        url = r.get("html_url") or f"https://github.com/WJH-makers/{name}"
-        home = r.get("homepage") or ""
-        title = f"[{name}]({url})"
-        if home and str(home).startswith("http"):
-            title += f" · [site]({home})"
-        lines.append(
-            f"| {title} | {esc_cell(r['_tech'])} | {esc_cell(r['_skill'])} |"
+    rest = [
+        attach(by_name[nm])
+        for nm in sorted(
+            by_name,
+            key=lambda n: by_name[n].get("pushed_at") or "",
+            reverse=True,
         )
-    lines.append("")
-    lines.append(
-        "<sub>本表由 <code>scripts/generate_profile_readme.py</code> 根据公开仓库 API "
-        "+ <code>config/profile.yml</code> 自动生成。新仓库写好 description/topics 即可入表。</sub>"
+        if nm not in used
+    ]
+    if rest:
+        out.append(("🗂 其它", "", rest))
+    return out
+
+
+def render_projects(grouped: list[tuple[str, str, list[dict]]], max_n: int) -> str:
+    out: list[str] = []
+    count = 0
+    for title, blurb, items in grouped:
+        rows: list[str] = []
+        for r in items:
+            if count >= max_n:
+                break
+            name = r["name"]
+            url = r.get("html_url") or f"https://github.com/WJH-makers/{name}"
+            home = r.get("homepage") or ""
+            link = f"[{name}]({url})"
+            if home and str(home).startswith("http"):
+                link += f" · [↗]({home})"
+            rows.append(f"| {link} | {esc_cell(r['_tech'])} | {esc_cell(r['_skill'])} |")
+            count += 1
+        if not rows:
+            continue
+        head = f"**{esc_cell(title)}**"
+        if blurb:
+            head += f"　<sub>{esc_cell(blurb)}</sub>"
+        out.append(head)
+        out.append("")
+        out.append("| 项目 | 技术栈 | 练到的能力 |")
+        out.append("|---|---|---|")
+        out.extend(rows)
+        out.append("")
+    out.append(
+        "<sub>本区块由 <code>scripts/generate_profile_readme.py</code> 依公开仓库 API "
+        "+ <code>config/profile.yml</code> 自动生成 · 新仓库写好 description / topics "
+        "并在 config 里归组即可入表。</sub>"
     )
+    return "\n".join(out)
+
+
+def render_langs(pub: list[dict], cfg: dict) -> str:
+    n = int(cfg.get("lang_bar_count") or 8)
+    counts: dict[str, int] = {}
+    for r in pub:
+        lang = r.get("language")
+        if lang:
+            counts[lang] = counts.get(lang, 0) + 1
+    if not counts:
+        return "_暂无语言数据_"
+    total = sum(counts.values())
+    top = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[:n]
+    max_c = max(c for _, c in top)
+    width = 22
+    label_w = max(len(k) for k, _ in top)
+    lines = ["```text"]
+    for lang, c in top:
+        filled = max(1, round(width * c / max_c))
+        bar = "█" * filled + "░" * (width - filled)
+        pct = 100.0 * c / total
+        lines.append(f"{lang:<{label_w}}  {bar}  {c:>2} repo · {pct:4.1f}%")
+    lines.append("```")
     return "\n".join(lines)
 
 
 def render_recent(repos: list[dict], cfg: dict) -> str:
     exclude = set(cfg.get("exclude") or [])
+    overrides = cfg.get("overrides") or {}
     n = int(cfg.get("recent_count") or 6)
     items = [
         r
         for r in repos
-        if not r.get("fork")
-        and not r.get("private")
-        and r["name"] not in exclude
+        if not r.get("fork") and not r.get("private") and r["name"] not in exclude
     ][:n]
     if not items:
         return "_暂无公开动态_"
@@ -230,22 +280,17 @@ def render_recent(repos: list[dict], cfg: dict) -> str:
         name = r["name"]
         url = r.get("html_url") or f"https://github.com/WJH-makers/{name}"
         when = (r.get("pushed_at") or "")[:10]
-        desc = esc_cell(r.get("description") or "")
-        bit = f"- **[{name}]({url})** · `{when}`"
+        desc = description_for(name, r, overrides)
+        bit = f"- **[{name}]({url})**　<sub>`{when}`</sub>"
         if desc:
             bit += f" — {desc[:100]}"
         lines.append(bit)
     return "\n".join(lines)
 
 
-def render_meta(projects: list[dict], repos: list[dict]) -> str:
-    public = [
-        r
-        for r in repos
-        if not r.get("fork") and not r.get("private")
-    ]
+def render_meta(grouped: list[tuple[str, str, list[dict]]], pub: list[dict]) -> str:
     langs: dict[str, int] = {}
-    for r in public:
+    for r in pub:
         lang = r.get("language")
         if lang:
             langs[lang] = langs.get(lang, 0) + 1
@@ -253,10 +298,11 @@ def render_meta(projects: list[dict], repos: list[dict]) -> str:
         f"{k}×{v}"
         for k, v in sorted(langs.items(), key=lambda kv: (-kv[1], kv[0]))[:8]
     )
+    shown = sum(len(items) for _, _, items in grouped)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     return (
-        f"<sub>自动同步 · {now} · 公开非 fork 仓库 **{len(public)}** 个 · "
-        f"表内展示 **{len(projects)}** 个 · 语言分布：{top_langs or '—'}</sub>"
+        f"<sub>🤖 自动同步 · {now} · 公开非 fork 仓库 <b>{len(pub)}</b> 个 · "
+        f"项目表展示 <b>{shown}</b> 个 · 语言分布：{top_langs or '—'}</sub>"
     )
 
 
@@ -274,13 +320,16 @@ def replace_block(text: str, start: str, end: str, body: str) -> str:
 def generate(readme_text: str, cfg: dict, token: str | None) -> str:
     username = os.environ.get("PROFILE_USERNAME") or cfg.get("username") or "WJH-makers"
     repos = fetch_repos(username, token)
-    projects = select_projects(repos, cfg)
+    pub = public_repos(repos)
+    by_name = curated_by_name(repos, cfg)
+    grouped = group_projects(by_name, cfg)
+    max_n = int(cfg.get("max_projects") or 20)
+
     text = readme_text
-    text = replace_block(
-        text, *MARKERS["projects"], render_projects(projects)
-    )
+    text = replace_block(text, *MARKERS["projects"], render_projects(grouped, max_n))
+    text = replace_block(text, *MARKERS["langs"], render_langs(pub, cfg))
     text = replace_block(text, *MARKERS["recent"], render_recent(repos, cfg))
-    text = replace_block(text, *MARKERS["meta"], render_meta(projects, repos))
+    text = replace_block(text, *MARKERS["meta"], render_meta(grouped, pub))
     if not text.endswith("\n"):
         text += "\n"
     return text
