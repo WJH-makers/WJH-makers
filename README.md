@@ -95,13 +95,30 @@ Verilog     ██████░░░░░░░░░░░░░░░░  
 
 ### 🧰 技术栈
 
-**🧠 AI / ML**　`PyTorch` `Transformers` `DeepSpeed` `MindSpore` `CUDA`
-
-**⌨️ 语言**　`Python` `TypeScript` `Java` `C` `C++` `C#` `Verilog` `SQL`
-
-**🌐 Web / 后端**　`Next.js` `React` `FastAPI` `ASP.NET` `Spring` `Vercel`
-
-**⚙️ 系统 / 工具**　`Docker` `Git` `GitHub Actions` `Linux` `Nginx` `MySQL` `RISC-V`
+<p align="center">
+  <img src="assets/tech/python.svg" width="46" height="46" alt="Python"/>
+  <img src="assets/tech/typescript.svg" width="46" height="46" alt="TypeScript"/>
+  <img src="assets/tech/java.svg" width="46" height="46" alt="Java"/>
+  <img src="assets/tech/c.svg" width="46" height="46" alt="C"/>
+  <img src="assets/tech/cplusplus.svg" width="46" height="46" alt="C++"/>
+  <img src="assets/tech/csharp.svg" width="46" height="46" alt="C#"/>
+  <img src="assets/tech/pytorch.svg" width="46" height="46" alt="PyTorch"/>
+</p>
+<p align="center">
+  <img src="assets/tech/nextjs.svg" width="46" height="46" alt="Next.js"/>
+  <img src="assets/tech/react.svg" width="46" height="46" alt="React"/>
+  <img src="assets/tech/fastapi.svg" width="46" height="46" alt="FastAPI"/>
+  <img src="assets/tech/dotnetcore.svg" width="46" height="46" alt="ASP.NET Core"/>
+  <img src="assets/tech/spring.svg" width="46" height="46" alt="Spring"/>
+  <img src="assets/tech/mysql.svg" width="46" height="46" alt="MySQL"/>
+</p>
+<p align="center">
+  <img src="assets/tech/docker.svg" width="46" height="46" alt="Docker"/>
+  <img src="assets/tech/git.svg" width="46" height="46" alt="Git"/>
+  <img src="assets/tech/linux.svg" width="46" height="46" alt="Linux"/>
+  <img src="assets/tech/nginx.svg" width="46" height="46" alt="Nginx"/>
+</p>
+<p align="center"><sub>另含 MindSpore · DeepSpeed · CUDA · Verilog · RISC-V 等（无官方彩色图标，详见上方项目表）</sub></p>
 
 ---
 
