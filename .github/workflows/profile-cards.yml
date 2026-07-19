@@ -1,0 +1,29 @@
+name: Profile Summary Cards
+
+# 用 GitHub Actions 在 CI 内生成语言/统计/时段卡片 SVG，提交回仓库，
+# README 走相对路径引用（不依赖 vercel/shields 公共 API，国内可达）。
+on:
+  schedule:
+    - cron: "30 16 * * *"   # UTC 16:30 = 北京时间 00:30
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-summary-cards
+    steps:
+      - uses: actions/checkout@v4
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          UTC_OFFSET: 8
+          BRANCH_NAME: main
