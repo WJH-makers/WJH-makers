@@ -116,9 +116,9 @@
 ### 🕒 最近动态
 
 <!-- AUTO:RECENT:START -->
+- **[wjh-makers-learning-blog](https://github.com/WJH-makers/wjh-makers-learning-blog)**　<sub>`2026-07-20`</sub> — 个人学习成果博客：记录 Java 全栈、Git、MySQL、AI 与工程配置复盘，部署到 Vercel
 - **[typora-theme-claude-like](https://github.com/WJH-makers/typora-theme-claude-like)**　<sub>`2026-07-19`</sub> — Typora theme: Claude-like warm cream paper, dual-script fonts, Mermaid-ready (v37/v38)
 - **[mysql](https://github.com/WJH-makers/mysql)**　<sub>`2026-07-19`</sub> — Java / MySQL 课程与练习项目
-- **[wjh-makers-learning-blog](https://github.com/WJH-makers/wjh-makers-learning-blog)**　<sub>`2026-07-16`</sub> — 个人学习成果博客：记录 Java 全栈、Git、MySQL、AI 与工程配置复盘，部署到 Vercel
 - **[readme-template](https://github.com/WJH-makers/readme-template)**　<sub>`2026-07-05`</sub> — README.md template for new projects — 2026 best practices
 - **[AIProxyHub](https://github.com/WJH-makers/AIProxyHub)**　<sub>`2026-07-04`</sub> — AIProxyHub（二次修改版）：Windows 一键整合 CLIProxyAPI + 注册 + 本地面板 + 透明网关缓存池，并可打包为 EXE/安装包。
 - **[FTP](https://github.com/WJH-makers/FTP)**　<sub>`2026-07-04`</sub> — FTP client-server with resume (断点续传) support - C# WinForms + C WinSock
