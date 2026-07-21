@@ -1,7 +1,7 @@
-<h1 align="center">万佳泓　·　WJH-makers</h1>
+<h1 align="center">WJH-makers</h1>
 
 <p align="center">
-  武汉大学 CS · 2026 届　│　遥感视觉问答 · MoE 预训练 · 多智能体路由　│　兼修 编译器 / OS / 全栈
+  CS 本科　│　遥感视觉问答 · MoE 预训练 · 多智能体路由　│　兼修 编译器 / OS / 全栈
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://wwjjhh.online">🌐 学习博客</a>　·　<a href="mailto:wjh19@whu.edu.cn">📧 wjh19@whu.edu.cn</a>　·　<a href="https://github.com/WJH-makers?tab=repositories">📦 全部仓库</a>
+  <a href="https://wwjjhh.online">🌐 学习博客</a>　·　<a href="mailto:136443811+WJH-makers@users.noreply.github.com">📧 GitHub noreply</a>　·　<a href="https://github.com/WJH-makers?tab=repositories">📦 全部仓库</a>
 </p>
 
 ---
@@ -139,7 +139,7 @@
 ---
 
 <p align="center">
-  📧 <a href="mailto:wjh19@whu.edu.cn">wjh19@whu.edu.cn</a>　·　🌐 <a href="https://wwjjhh.online">wwjjhh.online</a>
+  📧 <a href="mailto:136443811+WJH-makers@users.noreply.github.com">GitHub noreply</a>　·　🌐 <a href="https://wwjjhh.online">wwjjhh.online</a>
 </p>
 
 <!-- AUTO:META:START -->
