@@ -48,7 +48,7 @@
 
 | 项目 | 技术栈 | 练到的能力 |
 |---|---|---|
-| [AIProxyHub](https://github.com/WJH-makers/AIProxyHub) | HTML | Windows 工具链整合、脚本自动化、打包发布 |
+| [AIProxyHub](https://github.com/WJH-makers/AIProxyHub) | Python · ai gateway · api gateway · byok | Windows 工具链整合、脚本自动化、打包发布 |
 | [typora-theme-claude-like](https://github.com/WJH-makers/typora-theme-claude-like) | CSS · cjk · claude · light theme | 主题工程、双脚本字体、Mermaid 友好 |
 | [readme-template](https://github.com/WJH-makers/readme-template) | documentation · github actions · github template · project template | 工程化模板、README / CI 最佳实践 |
 
@@ -99,11 +99,11 @@
 ### 🕒 最近动态
 
 <!-- AUTO:RECENT:START -->
+- **[typora-theme-claude-like](https://github.com/WJH-makers/typora-theme-claude-like)**　<sub>`2026-08-12`</sub> — Typora theme: Claude-like warm cream paper, dual-script fonts, Mermaid-ready (v37/v38)
+- **[AIProxyHub](https://github.com/WJH-makers/AIProxyHub)**　<sub>`2026-08-12`</sub> — Windows 本地优先的 AI 网关管理器：管理用户已授权的 provider、OpenAI-compatible 转发、按凭据隔离的缓存与限流。不创建账户、不规避 provider 限额。
 - **[wjh-makers-learning-blog](https://github.com/WJH-makers/wjh-makers-learning-blog)**　<sub>`2026-08-11`</sub> — 个人学习成果博客：记录 Java 全栈、Git、MySQL、AI 与工程配置复盘，部署到 Vercel
-- **[typora-theme-claude-like](https://github.com/WJH-makers/typora-theme-claude-like)**　<sub>`2026-07-19`</sub> — Typora theme: Claude-like warm cream paper, dual-script fonts, Mermaid-ready (v37/v38)
 - **[mysql](https://github.com/WJH-makers/mysql)**　<sub>`2026-07-19`</sub> — Java / MySQL 课程与练习项目
 - **[readme-template](https://github.com/WJH-makers/readme-template)**　<sub>`2026-07-05`</sub> — README.md template for new projects — 2026 best practices
-- **[AIProxyHub](https://github.com/WJH-makers/AIProxyHub)**　<sub>`2026-07-04`</sub> — AIProxyHub（二次修改版）：Windows 一键整合 CLIProxyAPI + 注册 + 本地面板 + 透明网关缓存池，并可打包为 EXE/安装包。
 <!-- AUTO:RECENT:END -->
 
 ---
@@ -125,5 +125,5 @@
 </p>
 
 <!-- AUTO:META:START -->
-<sub>🤖 项目 / 语言 / 动态由 GitHub Actions 依公开仓库自动同步 · 公开非 fork 仓库 <b>9</b> 个 · 项目表展示 <b>5</b> 个 · 语言分布：CSS×1, HTML×1, Java×1, Python×1, TypeScript×1</sub>
+<sub>🤖 项目 / 语言 / 动态由 GitHub Actions 依公开仓库自动同步 · 公开非 fork 仓库 <b>9</b> 个 · 项目表展示 <b>5</b> 个 · 语言分布：Python×2, CSS×1, Java×1, TypeScript×1</sub>
 <!-- AUTO:META:END -->
